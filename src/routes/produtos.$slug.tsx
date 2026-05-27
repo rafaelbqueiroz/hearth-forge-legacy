@@ -109,6 +109,14 @@ function ProductDetail() {
         </div>
       </section>
 
+      {p.slug === "tl-1000" && (
+        <section className="border-b border-border bg-card/30">
+          <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
+            <TopFinishSwitcher image={productImg} alt="Visualização da TL 1000 com troca de tampo" />
+          </div>
+        </section>
+      )}
+
       <section className="border-b border-border bg-card/30">
         <div className="mx-auto max-w-7xl px-6 py-20 lg:px-10 lg:py-28">
           <p className="text-xs font-semibold uppercase tracking-[0.22em] text-ember">Destaques</p>
