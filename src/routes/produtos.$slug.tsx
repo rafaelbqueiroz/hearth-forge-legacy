@@ -1,5 +1,5 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
-import { PRODUCTS } from "@/lib/products";
+import { PRODUCTS, type Product } from "@/lib/products";
 import { Hotspots } from "@/components/site/Hotspots";
 import productImg from "@/assets/product-tl1000.jpg";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
