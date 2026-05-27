@@ -1,7 +1,7 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import { PRODUCTS } from "@/lib/products";
 import productImg from "@/assets/product-tl1000.jpg";
-import { Check, MessageCircle } from "lucide-react";
+import { ArrowRight, Check, MessageCircle } from "lucide-react";
 
 export const Route = createFileRoute("/produtos")({
   head: () => ({
