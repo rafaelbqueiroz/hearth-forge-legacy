@@ -42,7 +42,7 @@ export const Route = createFileRoute("/produtos/$slug")({
 });
 
 function ProductDetail() {
-  const { product: p } = Route.useLoaderData();
+  const { product: p } = Route.useLoaderData() as { product: Product };
 
   return (
     <>
