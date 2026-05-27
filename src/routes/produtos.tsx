@@ -103,9 +103,13 @@ function ProductSection({ title, eyebrow, items }: { title: string; eyebrow: str
                 >
                   <MessageCircle className="h-4 w-4" /> Orçamento
                 </a>
-                <button className="rounded-sm border border-border px-4 py-3 text-sm font-medium hover:border-ember hover:text-ember">
-                  Ficha técnica
-                </button>
+                <Link
+                  to="/produtos/$slug"
+                  params={{ slug: p.slug }}
+                  className="inline-flex items-center justify-center gap-2 rounded-sm border border-border px-4 py-3 text-sm font-medium hover:border-ember hover:text-ember"
+                >
+                  Ver detalhes <ArrowRight className="h-4 w-4" />
+                </Link>
               </div>
             </article>
           ))}
