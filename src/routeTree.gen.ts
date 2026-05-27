@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as TecnologiaRouteImport } from './routes/tecnologia'
 import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as ContatoRouteImport } from './routes/contato'
 import { Route as ArquitetosRouteImport } from './routes/arquitetos'
 import { Route as IndexRouteImport } from './routes/index'
@@ -25,6 +26,11 @@ const TecnologiaRoute = TecnologiaRouteImport.update({
 const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
   id: '/sitemap.xml',
   path: '/sitemap.xml',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const ContatoRoute = ContatoRouteImport.update({
@@ -57,6 +63,7 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/arquitetos': typeof ArquitetosRoute
   '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
@@ -66,6 +73,7 @@ export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/arquitetos': typeof ArquitetosRoute
   '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
@@ -76,6 +84,7 @@ export interface FileRoutesById {
   '/': typeof IndexRoute
   '/arquitetos': typeof ArquitetosRoute
   '/contato': typeof ContatoRoute
+  '/faq': typeof FaqRoute
   '/sitemap.xml': typeof SitemapDotxmlRoute
   '/tecnologia': typeof TecnologiaRoute
   '/produtos/$slug': typeof ProdutosSlugRoute
@@ -87,6 +96,7 @@ export interface FileRouteTypes {
     | '/'
     | '/arquitetos'
     | '/contato'
+    | '/faq'
     | '/sitemap.xml'
     | '/tecnologia'
     | '/produtos/$slug'
@@ -96,6 +106,7 @@ export interface FileRouteTypes {
     | '/'
     | '/arquitetos'
     | '/contato'
+    | '/faq'
     | '/sitemap.xml'
     | '/tecnologia'
     | '/produtos/$slug'
@@ -105,6 +116,7 @@ export interface FileRouteTypes {
     | '/'
     | '/arquitetos'
     | '/contato'
+    | '/faq'
     | '/sitemap.xml'
     | '/tecnologia'
     | '/produtos/$slug'
@@ -115,6 +127,7 @@ export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   ArquitetosRoute: typeof ArquitetosRoute
   ContatoRoute: typeof ContatoRoute
+  FaqRoute: typeof FaqRoute
   SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   TecnologiaRoute: typeof TecnologiaRoute
   ProdutosSlugRoute: typeof ProdutosSlugRoute
@@ -135,6 +148,13 @@ declare module '@tanstack/react-router' {
       path: '/sitemap.xml'
       fullPath: '/sitemap.xml'
       preLoaderRoute: typeof SitemapDotxmlRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/contato': {
@@ -179,6 +199,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   ArquitetosRoute: ArquitetosRoute,
   ContatoRoute: ContatoRoute,
+  FaqRoute: FaqRoute,
   SitemapDotxmlRoute: SitemapDotxmlRoute,
   TecnologiaRoute: TecnologiaRoute,
   ProdutosSlugRoute: ProdutosSlugRoute,
