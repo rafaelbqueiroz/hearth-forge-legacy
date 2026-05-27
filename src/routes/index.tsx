@@ -3,7 +3,7 @@ import { ArrowRight, Flame, Shield, Wind, Layers, Award } from "lucide-react";
 import heroImg from "@/assets/hero-fireplace.jpg";
 import lifestyleImg from "@/assets/lifestyle-living.jpg";
 import steelImg from "@/assets/steel-detail.jpg";
-import productImg from "@/assets/product-tl1000.jpg";
+
 import { Simulator } from "@/components/site/Simulator";
 import { PRODUCTS } from "@/lib/products";
 
