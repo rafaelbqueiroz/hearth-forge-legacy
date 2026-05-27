@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { PRODUCTS, type Product } from "@/lib/products";
 import { Hotspots } from "@/components/site/Hotspots";
+import { TopFinishSwitcher } from "@/components/site/TopFinishSwitcher";
 import productImg from "@/assets/product-tl1000.jpg";
 import { ArrowLeft, Check, MessageCircle } from "lucide-react";
 
@@ -10,7 +11,7 @@ export const Route = createFileRoute("/produtos/$slug")({
     if (!product) throw notFound();
     return { product };
   },
-  head: ({ loaderData }) => {
+  head: ({ loaderData, params }) => {
     const p = loaderData?.product;
     if (!p) return { meta: [{ title: "Produto · Tochetto Lareiras" }] };
     return {
@@ -19,7 +20,36 @@ export const Route = createFileRoute("/produtos/$slug")({
         { name: "description", content: `${p.model} — ${p.tagline} Aquece ${p.area}. Aço ${p.steel}.` },
         { property: "og:title", content: `${p.model} · Tochetto Lareiras` },
         { property: "og:description", content: p.tagline },
+        { property: "og:type", content: "product" },
         { property: "og:image", content: productImg },
+        { property: "og:url", content: `/produtos/${params?.slug ?? p.slug}` },
+      ],
+      links: [{ rel: "canonical", href: `/produtos/${params?.slug ?? p.slug}` }],
+      scripts: [
+        {
+          type: "application/ld+json",
+          children: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            name: `Tochetto ${p.model}`,
+            brand: { "@type": "Brand", name: "Tochetto Lareiras de Alto Rendimento" },
+            description: `${p.tagline} Calefator de alto rendimento — aquece ${p.area}, com chapa de aço ${p.steel}, peso ${p.weight}, instalação ${p.type}.`,
+            image: productImg,
+            category: "Lareiras / Calefatores a lenha",
+            additionalProperty: [
+              { "@type": "PropertyValue", name: "Área de aquecimento", value: p.area },
+              { "@type": "PropertyValue", name: "Peso", value: p.weight },
+              { "@type": "PropertyValue", name: "Espessura de aço", value: p.steel },
+              { "@type": "PropertyValue", name: "Instalação", value: p.type },
+            ],
+            offers: {
+              "@type": "Offer",
+              availability: "https://schema.org/InStock",
+              priceCurrency: "BRL",
+              url: `/produtos/${params?.slug ?? p.slug}`,
+            },
+          }),
+        },
       ],
     };
   },
