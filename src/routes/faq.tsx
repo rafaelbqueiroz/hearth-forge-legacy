@@ -6,9 +6,9 @@ export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
       { title: "Central de Ajuda · Tochetto Lareiras" },
-      { name: "description", content: "Dúvidas frequentes sobre lareiras Tochetto: choque térmico no vidro, uso de chaleira no tampo inox, consumo das ventoinhas e tipos de lenha." },
+      { name: "description", content: "Dúvidas frequentes sobre lareiras Tochetto: vidro Schott Robax®, tampo inox, ventilação forçada, lenha ideal, diâmetros de chaminé por modelo e instalação." },
       { property: "og:title", content: "Central de Ajuda · Tochetto Lareiras" },
-      { property: "og:description", content: "Respostas técnicas para usar sua lareira Tochetto com segurança e máxima eficiência." },
+      { property: "og:description", content: "Respostas técnicas oficiais de fábrica para usar sua lareira Tochetto com segurança e máxima eficiência." },
     ],
     scripts: [
       {
@@ -34,15 +34,15 @@ const FAQS = [
     items: [
       {
         q: "Posso jogar água ou colocar lenha úmida sem risco de quebrar o vidro?",
-        a: "O vidro Schott Robax® das Tochetto é cerâmico, resiste a 760 °C contínuos. Mas evite choque térmico: nunca encoste objetos gelados ou molhados no vidro quente, e não pulverize água diretamente. Lenha úmida cria fuligem e reduz a eficiência — use sempre lenha com até 20% de umidade.",
+        a: "Não é recomendado de forma alguma. O vidro é uma vitrocerâmica importada Schott Robax®, projetada para temperaturas extremas e choques térmicos elevados. Ainda assim, o contato direto com água fria ou vapor excessivo de lenha muito úmida sobre o vidro superaquecido cria tensões desnecessárias e pode manchar a superfície. A substituição por vidros comuns ou temperados é expressamente proibida pelo risco de estilhaçamento e acidentes graves.",
       },
       {
         q: "Por que o vidro fica limpo sozinho?",
-        a: "Existe uma abertura superior que injeta uma cascata fina de ar pré-aquecido sobre a face interna do vidro. Esse fluxo afasta a fumaça e queima micropartículas antes que elas grudem — é o sistema de autolimpeza por cortina de ar.",
+        a: "As lareiras possuem um sistema de cascata de ar (barreira aerodinâmica). O ar frio entra por uma fresta regulável na parte superior da porta e desce rente à face interna do vidro cerâmico. Esse fluxo contínuo impede que os gases carregados de fuligem entrem em contato direto com o vidro, mantendo a visão do fogo desimpedida por muito mais tempo.",
       },
       {
-        q: "Em quanto tempo a porta esfria depois de apagar o fogo?",
-        a: "A puxadeira é fria ao toque mesmo em operação, mas a porta e o vidro permanecem quentes por 1 a 2 horas após o último ciclo. Mantenha crianças e animais afastados nesse intervalo.",
+        q: "A porta e as laterais esfriam rápido após o fogo apagar?",
+        a: "Não, e é preciso ter cuidado. Devido à robustez das chapas de aço carbono de 4,75 mm nas laterais e de 12,7 mm (meia polegada) na câmara de combustão, os equipamentos possuem alta inércia térmica e continuam irradiando calor por um período prolongado mesmo após o fim das brasas. A porta, a tampa superior e a chaminé são as partes que mais acumulam calor e podem causar queimaduras se tocadas sem proteção durante ou logo após o uso.",
       },
     ],
   },
@@ -51,11 +51,11 @@ const FAQS = [
     items: [
       {
         q: "Posso usar chaleira ou panela sobre o tampo de inox da TL 1000?",
-        a: "Sim. O tampo opcional em aço inox 304 escovado da TL 1000 foi dimensionado para suportar uma chaleira de até 3 litros e atinge temperatura de fervura em 8–12 minutos com o fogo em regime. Evite arrastar a panela para preservar o acabamento escovado.",
+        a: "Sim. O modelo TL 1000 com tampo opcional em aço inox escovado foi desenvolvido especificamente para essa finalidade. Nas lareiras com tampo de aço carbono pintado de preto, o gotejamento ou transbordamento de água fria sobre a superfície quente provoca choque térmico e mancha permanentemente a pintura de alta temperatura — por isso o uso de chaleiras é restrito ao opcional inox da TL 1000.",
       },
       {
-        q: "O tampo preto risca com o uso?",
-        a: "O tampo em aço carbono recebe pintura industrial de alta temperatura. Para limpeza, use pano seco e, se necessário, álcool isopropílico — nunca esponja abrasiva ou removedores agressivos.",
+        q: "O tampo preto risca com facilidade? Como devo limpar?",
+        a: "A tinta siliconada de alta temperatura resiste a picos de até 650 °C, mas não tem a mesma resistência a riscos mecânicos que uma pintura automotiva. Nunca arraste objetos rígidos (panelas, ferramentas) sobre o tampo pintado. A limpeza externa deve ser feita somente com o calefator totalmente frio, usando apenas espanador e um pano macio levemente umedecido.",
       },
     ],
   },
@@ -63,16 +63,16 @@ const FAQS = [
     category: "Ventilação Forçada",
     items: [
       {
-        q: "Qual o consumo elétrico dos ventiladores?",
-        a: "Os ventiladores das TL 2000 e TL 3000 consomem entre 40 W e 60 W com os dois motores ligados — equivalente a uma lâmpada incandescente. Funcionam com tomada 110/220 V automática e podem ser desligados quando não desejado.",
+        q: "Qual o consumo elétrico dos ventiladores? Eles gastam muito?",
+        a: "O consumo é extremamente baixo. As lareiras com motores (TL 2000, TL 3000 e TL 4000) consomem no máximo entre 40 W e 60 W — equivalente a uma lâmpada residencial antiga de baixo consumo. Na prática, seriam necessárias cerca de 17 horas contínuas de uso para gerar um custo de energia irrisório no fim do mês.",
       },
       {
-        q: "Os motores fazem barulho?",
-        a: "Não. Usamos motores de indução de baixa rotação com rolamentos selados. Em ambientes residenciais normais, o ruído fica abaixo de 30 dB no nível mais alto — mais silencioso que uma conversa em sussurro.",
+        q: "Os motores fazem barulho durante o funcionamento?",
+        a: "Os ventiladores de fábrica são dimensionados para priorizar o conforto acústico no ambiente residencial. No TL 2000, por exemplo, o sistema conta com duas teclas independentes: você pode ligar apenas um motor para uma ventilação mais suave e silenciosa, ou ambos quando desejar aquecer o cômodo de forma rápida.",
       },
       {
-        q: "Posso instalar a lareira sem usar a ventoinha?",
-        a: "Sim. Toda a linha aquece por radiação e convecção natural mesmo desligada da tomada. A ventilação forçada acelera a distribuição do calor em ambientes integrados ou com pé-direito alto.",
+        q: "Posso usar a lareira com a ventoinha desligada?",
+        a: "Sim. O equipamento continuará aquecendo o ambiente por irradiação direta e convecção natural. A eficiência máxima de extração e distribuição homogênea do ar quente, no entanto, é atingida com os ventiladores ligados.",
       },
     ],
   },
@@ -80,16 +80,16 @@ const FAQS = [
     category: "Lenha & Operação",
     items: [
       {
-        q: "Que tipo de lenha devo usar?",
-        a: "Lenhas duras e bem secas: eucalipto (mínimo 12 meses de secagem), angico, ipê e bracatinga rendem mais calor por ciclo. Evite pinus em excesso (queima rápido e gera muita fagulha) e lenhas com resina, tratadas ou pintadas.",
+        q: "Que tipo de lenha devo usar para ativar a dupla combustão?",
+        a: "A dupla combustão é espontânea e ocorre quando os gases da queima primária atingem 350 °C ou mais no topo da câmara. Para isso são necessários três fatores simultâneos: fogo ativo, brasa acumulada e lenha de boa qualidade. Use madeiras duras e muito bem secas (eucalipto, acácia, angico). Evite madeiras úmidas, tratadas, pintadas ou resinadas (como pinus em excesso) — produzem pouca caloria, deterioram a pintura e geram acúmulo perigoso de sujeira na chaminé.",
       },
       {
-        q: "Qual o tamanho máximo das toras?",
-        a: "TL 700: até 30 cm · TL 800/1000: até 35 cm · TL 2000: até 40 cm · TL 3000: até 46 cm · TL 4000: conforme nicho.",
+        q: "Qual o tamanho máximo das toras para cada modelo?",
+        a: "Para garantir o fechamento hermético da porta e o fluxo correto de ar interno, respeite os limites de catálogo: TL 700 até 32 cm · TL 800 até 32 cm · TL 1000 até 39 cm · TL 2000 até 37 cm · TL 3000 até 46 cm.",
       },
       {
-        q: "Como faço a primeira queima?",
-        a: "Nas três primeiras queimas, mantenha o fogo brando (carga reduzida) por 1–2 horas para curar a pintura e estabilizar a vedação cerâmica. É normal sentir leve odor de tinta nas primeiras horas — ventile o ambiente.",
+        q: "Como devo proceder nas primeiras queimas do equipamento?",
+        a: "Toda lareira nova passa por um processo de cura. Nas primeiras duas ou três utilizações, faça um fogo moderado (pouca lenha) por cerca de uma a duas horas. Isso estabiliza as vedações cerâmicas e cura a pintura siliconada. Durante esse processo é normal liberar um leve odor de tinta sendo curada — basta manter o ambiente bem ventilado.",
       },
     ],
   },
@@ -97,12 +97,12 @@ const FAQS = [
     category: "Instalação",
     items: [
       {
-        q: "Qual o diâmetro da chaminé?",
-        a: "Toda a linha TL usa chaminé de 6\" (152 mm) em aço inox 304 ou 430 com parede dupla nas travessias de laje e telhado. O comprimento mínimo recomendado é 4 metros verticais.",
+        q: "Qual o diâmetro correto da chaminé para o meu modelo?",
+        a: "O diâmetro da tubulação de exaustão varia conforme o projeto de saída de gases de cada modelo para evitar retorno de fumaça: TL 700 — 110 mm · TL 800 — 120 mm · TL 2000 — 120 mm · TL 3000 — 150 mm. A instalação deve usar tubulação de inox comercial e respeitar a altura mínima de tiragem vertical indicada no manual. Usar diâmetro diferente do especificado compromete a tiragem e invalida a garantia.",
       },
       {
-        q: "Preciso de chão de alvenaria?",
-        a: "Não necessariamente, mas é obrigatório um piso não combustível com avanço mínimo de 30 cm na frente da porta. Pedra, porcelanato técnico ou chapa metálica funcionam.",
+        q: "Preciso construir uma base especial de alvenaria no chão?",
+        a: "Não. Diferente das lareiras tradicionais de alvenaria, as lareiras de alto rendimento Tochetto possuem isolamento térmico eficiente e não esquentam o chão. Em modelos como o TL 2000 o espaço inferior é inclusive projetado para armazenar lenha com segurança. Por precaução contra fagulhas ao abrir a porta para reposição, recomenda-se que a área imediatamente à frente do equipamento tenha piso não combustível (porcelanato, pedra ou chapa protetora de metal).",
       },
     ],
   },
@@ -129,8 +129,8 @@ function FaqPage() {
             Perguntas frequentes.
           </h1>
           <p className="mt-6 max-w-2xl text-lg text-foreground/80">
-            Vidro, lenha, ventilação, instalação. As dúvidas que mais chegam ao nosso suporte — respondidas pela própria
-            equipe técnica de fábrica.
+            Vidro, lenha, ventilação, tampo, instalação. Respostas técnicas baseadas estritamente nos dados oficiais de
+            fábrica.
           </p>
 
           <div className="mt-10 flex max-w-xl items-center gap-3 rounded-sm border border-border bg-background px-4 py-3 focus-within:border-ember">
