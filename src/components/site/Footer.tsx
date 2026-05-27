@@ -1,6 +1,8 @@
 import { Link } from "@tanstack/react-router";
 import { Flame } from "lucide-react";
 
+import { nav } from "@/lib/navigation";
+
 export function Footer() {
   return (
     <footer className="border-t border-border/60 bg-card/30">
@@ -24,9 +26,13 @@ export function Footer() {
           <div>
             <h4 className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Navegação</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><Link to="/produtos" className="text-foreground/80 hover:text-ember">Linha TL</Link></li>
-              <li><Link to="/tecnologia" className="text-foreground/80 hover:text-ember">Tecnologia</Link></li>
-              <li><Link to="/contato" className="text-foreground/80 hover:text-ember">Contato</Link></li>
+              {nav.map((item) => (
+                <li key={item.to}>
+                  <Link to={item.to} className="text-foreground/80 transition-colors hover:text-ember">
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
