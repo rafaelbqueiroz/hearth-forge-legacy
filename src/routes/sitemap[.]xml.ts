@@ -4,7 +4,20 @@ import type {} from "@tanstack/react-start";
 // TODO: replace with your project URL once a project name or custom domain is set.
 const BASE_URL = "";
 
-const paths = ["/", "/produtos", "/tecnologia", "/contato"];
+const paths = [
+  "/",
+  "/produtos",
+  "/tecnologia",
+  "/arquitetos",
+  "/faq",
+  "/contato",
+  "/produtos/tl-700",
+  "/produtos/tl-800",
+  "/produtos/tl-1000",
+  "/produtos/tl-2000",
+  "/produtos/tl-3000",
+  "/produtos/tl-4000",
+];
 
 export const Route = createFileRoute("/sitemap.xml")({
   server: {
