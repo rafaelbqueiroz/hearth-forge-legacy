@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { LeadForm } from "@/components/site/LeadForm";
 
 export const Route = createFileRoute("/contato")({
   head: () => ({
@@ -48,46 +49,8 @@ function ContatoPage() {
           </div>
         </div>
 
-        <form
-          onSubmit={(e) => { e.preventDefault(); }}
-          className="rounded-sm border border-border bg-card p-8 lg:p-10 shadow-carbon h-fit"
-        >
-          <h2 className="font-display text-2xl font-semibold">Solicitar orçamento</h2>
-          <p className="mt-2 text-sm text-muted-foreground">Preencha e responderemos em até 1 dia útil.</p>
-
-          <div className="mt-8 space-y-5">
-            <Field label="Nome" name="nome" />
-            <Field label="E-mail" name="email" type="email" />
-            <Field label="Cidade / Estado" name="cidade" />
-            <div>
-              <label className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">Mensagem</label>
-              <textarea
-                rows={4}
-                placeholder="Conte sobre seu projeto — metragem, instalação livre ou embutida..."
-                className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none focus:border-ember"
-              />
-            </div>
-          </div>
-
-          <button className="mt-8 w-full rounded-sm bg-ember px-5 py-3.5 text-sm font-semibold uppercase tracking-wider text-ember-foreground transition-colors hover:bg-rust">
-            Enviar solicitação
-          </button>
-        </form>
+        <LeadForm />
       </div>
     </section>
-  );
-}
-
-function Field({ label, name, type = "text" }: { label: string; name: string; type?: string }) {
-  return (
-    <div>
-      <label htmlFor={name} className="text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">{label}</label>
-      <input
-        id={name}
-        name={name}
-        type={type}
-        className="mt-2 w-full rounded-sm border border-border bg-background px-4 py-3 text-sm outline-none focus:border-ember"
-      />
-    </div>
   );
 }
