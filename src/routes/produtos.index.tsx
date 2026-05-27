@@ -3,7 +3,7 @@ import { PRODUCTS } from "@/lib/products";
 import productImg from "@/assets/product-tl1000.jpg";
 import { ArrowRight, Check, MessageCircle } from "lucide-react";
 
-export const Route = createFileRoute("/produtos")({
+export const Route = createFileRoute("/produtos/")({
   head: () => ({
     meta: [
       { title: "Produtos · Linha TL — Tochetto Lareiras" },
